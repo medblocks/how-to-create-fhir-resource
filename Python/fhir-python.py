@@ -54,6 +54,13 @@ def create_patient():
 
         patient.name = [name]
 
+        patient.identifier = [
+            {
+                "system": "http://examplehospital.com/patients",
+                "value": "12345"
+            }
+        ]
+
         patient.gender ="male"
         patient.birthDate = "1990-04-01"
 

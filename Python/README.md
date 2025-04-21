@@ -24,13 +24,20 @@ This guide will help you set up and run the Python project.
 3. To install the required packages, run:
 
    ```bash
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 4. To deactivate the virtual environment when done:
    ```bash
    deactivate
    ```
+
+OR run
+
+```bash
+./setup_env.sh
+```
+This script will create a virtual environment, activate it, and install the required packages automatically.
 
 ## Running the Code
 
