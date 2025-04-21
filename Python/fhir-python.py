@@ -8,6 +8,7 @@ from fhir.resources.codeableconcept import CodeableConcept
 from fhir.resources.coding import Coding
 from fhir.resources.quantity import Quantity
 from fhir.resources.reference import Reference
+from fhir.resources.identifier import Identifier
 
 # Configure logging
 logging.basicConfig(
@@ -54,12 +55,10 @@ def create_patient():
 
         patient.name = [name]
 
-        patient.identifier = [
-            {
-                "system": "http://examplehospital.com/patients",
-                "value": "12345"
-            }
-        ]
+        identifier = Identifier()
+        identifier.system = "http://examplehospital.com/patients"
+        identifier.value = "12345"
+        patient.identifier = [identifier]
 
         patient.gender ="male"
         patient.birthDate = "1990-04-01"
