@@ -125,6 +125,13 @@ def create_observation(patient_id):
             status="final"
         )
         
+        category = CodeableConcept()
+        category.coding = [Coding(
+            system="http://terminology.hl7.org/CodeSystem/observation-category",
+            code="vital-signs",
+            display="Vital Signs"
+        )]
+        obs.category = [category]
        
 
         # Set the effective date time
